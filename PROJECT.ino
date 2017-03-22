@@ -69,11 +69,9 @@ void loop() {
   if (reading != lastButtonState) {
     // reset the debouncing timer
     lastDebounceTime = millis();
-
-    count++;
-  // print the results to the serial monitor:
-    Serial.print("counter = ");
-    Serial.println(count);
+ 
+  
+    
     
   }
 
@@ -91,7 +89,11 @@ void loop() {
       if (buttonState == HIGH) {
         ledState = !ledState;
       
-        
+        count++;
+ 
+  // print the results to the serial monitor:
+    Serial.print("counter = ");
+    Serial.println(count);
       }
     }
   }
